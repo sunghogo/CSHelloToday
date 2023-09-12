@@ -19,7 +19,7 @@ function getCurrentTime() {
   const minutes = currentTime.getMinutes();
   const formattedTime = `${hours > 12 ? hours - 12 : hours}:${String(
     minutes
-  ).padStart(2, '0')} ${hours > 12 ? 'PM' : 'AM'}`;
+  ).padStart(2, '0')} ${hours >= 12 ? 'PM' : 'AM'}`;
   return formattedTime;
 }
 
